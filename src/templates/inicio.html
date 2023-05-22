@@ -1,0 +1,13 @@
+{{ titulo }}
+<hr/>
+<br/>
+
+{% if mensaje %}
+    <p>{{ mensaje }}</p>
+    <a href="{% url 'inicio' %}">Volver al registro</a>
+{% else %}
+    <form method="POST" action="">{% csrf_token %}
+        {{ el_form.as_p }}
+        <input type="submit" value="Registrar">
+    </form>
+{% endif %}

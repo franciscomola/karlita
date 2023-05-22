@@ -1,0 +1,8 @@
+<h1>Contacto</h1>
+<hr/>
+<br/>
+
+<form method="POST" action="">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar">
+</form>
