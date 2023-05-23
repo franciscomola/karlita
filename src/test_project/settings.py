@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static_pro' / 'static',
+    '/home/franmola/Escritorio/karlita/src/static_pro/static/',
 ]
 
 STATIC_ROOT = BASE_DIR.parent / 'static_env' / 'static_root'
@@ -155,4 +155,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1 
+
 LOGIN_REDIRECT_URL = '/'
