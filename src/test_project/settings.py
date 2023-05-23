@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #apps de terceros 
+    'crispy_forms',
+    "crispy_bootstrap5",
     'boletin',
+
 ]
 
 MIDDLEWARE = [
@@ -60,6 +64,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'test_project.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 
 TEMPLATES = [
     {

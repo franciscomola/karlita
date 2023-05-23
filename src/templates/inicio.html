@@ -1,13 +1,40 @@
+
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block head_title %}Bienvenidos | {% endblock %}
+{% block jumbotron %}
+<div class="bg-body-tertiary p-5 rounded">
+
+<div class='row'>
+    <div class="col-sm-6">
+    <h1>Prueba con Django</h1>
+    <p class="lead">Proyecto realizado por Francisco con el objetivo de probar y adquirir conocimiento sobre django y sus utilidades.</p>
+    <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">Unete &raquo;</a>
+    </div>
+    <div class="col-sm-5" style="background-color: black;height:400px;""></dir>    
+</div>
+</div>
+
+{% endblock %}
+
+
+
 {{ titulo }}
 <hr/>
 <br/>
-
+{% block content %}
 {% if mensaje %}
     <p>{{ mensaje }}</p>
     <a href="{% url 'inicio' %}">Volver al registro</a>
 {% else %}
+<div class="col-sm-3 pull-left">
+    <p class="lead text-align-center ">{{ title }}</p>
     <form method="POST" action="">{% csrf_token %}
-        {{ el_form.as_p }}
-        <input type="submit" value="Registrar">
+        {{ el_form|crispy }}
+        <input type="submit" style="background-color: rgb(180, 180, 180)"; value="Registrarse">
     </form>
+</div>
 {% endif %}
+{% endblock %}

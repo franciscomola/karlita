@@ -5,7 +5,7 @@ from .forms import RegModelForm, ContactForm
 from .models import Registrados
 
 def inicio(request):
-    titulo = "HOLA"
+    titulo = "Contactar"
     mensaje = None
 
     if request.user.is_authenticated:
@@ -28,10 +28,11 @@ def inicio(request):
         "mensaje": mensaje,
     }
 
-    return render(request, "base.html", context)
+    return render(request, "inicio.html", context)
 
 
 def contact(request):
+    titulo = "Contacto"
     form = ContactForm(request.POST or None)
     if form.is_valid():
         form_mensaje = form.cleaned_data.get("mensaje")
@@ -55,5 +56,6 @@ def contact(request):
 
     context = {
         "form": form,
+        "titulo": titulo,
     }
     return render(request, "form.html", context)
