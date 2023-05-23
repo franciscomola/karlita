@@ -12,7 +12,9 @@
     <p class="lead">Proyecto realizado por Francisco con el objetivo de probar y adquirir conocimiento sobre django y sus utilidades.</p>
     <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">Unete &raquo;</a>
     </div>
-    <div class="col-sm-5" style="background-color: black;height:400px;""></dir>    
+    <div class="col-sm-6"><iframe src="MIPdf" width="650" height="400" style="border: none;">  </iframe>
+
+    </div>    
 </div>
 </div>
 
@@ -32,7 +34,7 @@
     <p class="lead text-align-center ">{{ title }}</p>
     <form method="POST" action="">{% csrf_token %}
         {{ el_form|crispy }}
-        <input type="submit" style="background-color: rgb(180, 180, 180)"; value="Registrarse">
+        <input type="submit"; value="Unete">
     </form>
 </div>
 {% endif %}
