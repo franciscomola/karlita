@@ -48,9 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #apps de terceros 
+    'boletin',
     'crispy_forms',
     "crispy_bootstrap5",
-    'boletin',
     'registration',
 
 ]
@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    '/home/franmola/Escritorio/karlita/src/static_pro/static/',
+    BASE_DIR / "static_pro" / "static",
 ]
 
 STATIC_ROOT = BASE_DIR.parent / 'static_env' / 'static_root'
