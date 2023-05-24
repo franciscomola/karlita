@@ -59,3 +59,4 @@ def contact(request):
         "titulo": titulo,
     }
     return render(request, "form.html", context)
+    
