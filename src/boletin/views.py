@@ -35,13 +35,13 @@ def contact(request):
     titulo = "Contacto"
     form = ContactForm(request.POST or None)
     if form.is_valid():
-        form_mensaje = form.cleaned_data.get("mensaje")
         form_nombre = form.cleaned_data.get("nombre")
         form_email = form.cleaned_data.get("email")
+        form_mensaje = form.cleaned_data.get("mensaje")
         
         asunto = 'Form de contacto'
         email_from = settings.EMAIL_HOST_USER
-        email_to = [email_from, 'franciscomanuel.monjo.lancharro.alu@iesfernandoaguilar.es']
+        email_to = [email_from, 'franciscomanuel.monjo@gmail.com']
         email_mensaje = f"{form_nombre}: {form_mensaje} enviado por {form_email}"
         
         send_mail(
