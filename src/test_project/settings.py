@@ -30,12 +30,11 @@ ALLOWED_HOSTS = []
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER ='apikey'
-EMAIL_HOST_PASSWORD ='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'
+EMAIL_HOST_PASSWORD ='KEY_SENDGRID'
 EMAIL_PORT= 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'franciscomanuel.monjo@gmail.com'
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+
 """
 Con gmail ya no es posible si no se utiliza un tercero como sendgrid
 """
